@@ -136,6 +136,9 @@ case_inherit_in_rec_set =
 case_lang_version =
     constantEqualText "5" "builtins.langVersion"
 
+case_builtins_store_dir =
+    constantEqualText' "/nix/store/test" "${builtins.storeDir}/test"
+
 case_rec_set_attr_path_simpl =
     constantEqualText "123" [i|
       let x = rec {
